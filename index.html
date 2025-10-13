@@ -6,6 +6,8 @@
   <title>Virtual Aquarium</title>
   <link rel="icon" type="image/png" href="images/coralicon.png" />
   <link rel="stylesheet" href="designing_css/style.css" />
+  <!-- Include Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
  <header>
@@ -14,11 +16,9 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Types</a></li>
         <li><a href="habitat.html">Habitats</a></li>
-        <li><a href="#">Fun Facts</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -34,7 +34,7 @@
       </video>
     </div>
     <div class="hero-text">
-      <h2>Welcome to the Virtual Aquarium</h2>
+      <h2>Welcome to the Virtual Aquarium by Mriganka</h2>
       <p>Explore the wonders of the deep blue sea — from vibrant coral reefs to the graceful dance of ocean creatures. 
         Dive into an interactive journey through marine ecosystems, rare species,
          and the hidden beauty of life beneath the surface, all from the comfort of your screen.</p>
@@ -81,7 +81,7 @@
           <li>They lay eggs that hatch in 6–10 days.</li>
         </ul>
       </div>
-    </div>
+    </div>  
 
   </div>
 </section>
@@ -99,8 +99,63 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Virtual Aquarium | Built for University Project</p>
+  <div class="footer-container container">
+    <!-- Newsletter Section -->
+    <div class="newsletter-card">
+      <h3>📰 Subscribe to our Newsletter</h3>
+      <p>Get the latest updates, news, and underwater wonders straight to your inbox!</p>
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="social-media-column">
+  <h3>Follow Us</h3>
+  <ul class="social-icons-list">
+    <!-- LinkedIn Icon -->
+    <li>
+      <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </li>
+    <!-- Instagram Icon -->
+    <li>
+      <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </li>
+     <li>
+      <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
+    </li>
+      </button>
+    </li>
+  </ul>
+</div>
+<!-- About Section -->
+<div class="about-column">
+  <h3>About</h3>
+  <ul class="about-list">
+    <li>
+      <a href="about-us.html" class="about-item">About Us</a>
+    </li>
+    <li>
+      <a href="our-mission.html" class="about-item">Our Mission</a>
+    </li>
+    <li>
+      <a href="the-team.html" class="about-item">The Team</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+  <!-- Copyright Section -->
+  <p class="footer-bottom">&copy; 2025 Virtual Aquarium | Built for University Project</p>
 </footer>
+
 
 <script src="JS_Source/script.js"></script>
 </body>
