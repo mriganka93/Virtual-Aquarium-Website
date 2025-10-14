@@ -23,10 +23,11 @@ header {
   left: 0;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Adjusted to ensure hamburger placement */
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
+  position: relative; /* Relative for absolute positioning of hamburger */
 }
 
 .container {
@@ -60,6 +61,74 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default, shown on mobile */
+  background: transparent; /* Transparent background to blend with header */
+  border: none; /* Remove any borders */
+  cursor: pointer;
+  z-index: 1100; /* Above other elements */
+  padding: 10px;
+  position: absolute; /* Position in top-right corner */
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.open .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open .bar:nth-child(2) { opacity: 0; }
+.hamburger.open .bar:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+/* Mobile Menu (UPDATED!) */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 80px; /* Adjusted to ensure it starts below header */
+  left: 0;
+  width: 100%;
+  background-color: #006064;
+  padding: 20px 0; /* Increased padding to prevent cropping */
+  z-index: 1000;
+  transform: translateY(-100%); /* Hidden off-screen */
+  transition: transform 0.3s ease-in-out; /* Slide effect */
+}
+
+.mobile-nav.open {
+  display: block;
+  transform: translateY(0); /* Slide in */
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  list-style: none; /* Ensure no bullets */
+  padding: 10px 0; /* Added padding to prevent cropping of "Home" */
+}
+
+.mobile-nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -313,7 +382,12 @@ footer {
   .featured-content {
     flex-direction: column;
   }
+
+  /* Hide desktop nav, show hamburger */
+  header nav { display: none; }
+  .hamburger { display: block; }
 }
+
 /* GALLERY SECTION */
 .gallery {
   padding: 100px 20px 60px;
@@ -381,7 +455,6 @@ footer {
   }
 }
 
-
 /* Accordion container */
 .accordion {
   max-width: 800px;
@@ -390,7 +463,6 @@ footer {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   background-color: #e0f7fa;
-  
 }
 
 /* Each item */
@@ -400,7 +472,6 @@ footer {
 .accordion-item {
   margin-bottom: 50px; /* 👈 Adds spacing between each accordion item */
 }
-
 
 /* Header: clickable, flex for text + icon */
 .accordion-header {
@@ -441,19 +512,6 @@ footer {
   border-top: 1px solid #b2ebf2;
 }
 
-/* Optional: Smooth height transition (more advanced, but possible) */
-/* You can do something like: */
-/*
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-.accordion-content.open {
-  max-height: 500px;  // some max value
-}
-*/
-
 /* Responsive tweaks for accordion */
 @media (max-width: 768px) {
   .accordion-header {
@@ -466,6 +524,7 @@ footer {
     font-size: 0.9rem;
   }
 }
+
 /* Video Section */
 .video-section {
   text-align: center;
@@ -517,6 +576,7 @@ body, html {
 footer {
   margin-top: auto; 
 }
+
 /* --- Contact Page Styles --- */
 .contact-hero {
   background-color: #006064;
@@ -639,10 +699,11 @@ header {
   left: 0;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
+  position: relative;
 }
 
 .container {
@@ -826,4 +887,25 @@ footer {
 
 .about-item:hover {
   color: #64000d;
+}
+/* Active Nav Link */
+nav ul li a.active,
+.mobile-nav ul li a.active {
+  font-weight: bold;
+  color: #00acc1; /* Optional: Highlight color */
+  background-color: rgba(255, 255, 255, 0.3); /* Optional: Subtle background */
+}
+/* Active Nav Link */
+nav ul li a.active,
+.mobile-nav ul li a.active {
+  font-weight: bold;
+  color: #00acc1; /* Optional: Highlight color */
+  background-color: rgba(255, 255, 255, 0.3); /* Optional: Subtle background */
+}
+/* Active Nav Link */
+nav ul li a.active,
+.mobile-nav ul li a.active {
+  font-weight: bold;
+  color: #00acc1; /* Optional: Highlight color */
+  background-color: rgba(255, 255, 255, 0.3); /* Optional: Subtle background */
 }

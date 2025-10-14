@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,18 +11,34 @@
 </head>
 
 <body>
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="habitat.html" class="active">Habitats</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
     <div class="container">
       <h1>🌊 Virtual Aquarium</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="habitat.html">Habitats</a></li>
+          <li><a href="habitat.html" class="active">Habitats</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
 
   <section id="habitats" class="habitats-section">
@@ -31,7 +46,6 @@
       <h2>🌍 Marine Habitats</h2>
 
       <div class="accordion">
-
         <!-- Habitat 1: Coral Reefs -->
         <div class="accordion-item">
           <div class="accordion-header">
@@ -77,7 +91,7 @@
             </p>
           </div>
         </div>
-      <div class="accordion-item">
+        <div class="accordion-item">
           <div class="accordion-header">
             <h3>Estuaries</h3>
             <i class="fas fa-plus accordion-icon"></i>
@@ -90,7 +104,6 @@
             </p>
           </div>
         </div>
-
       </div> <!-- End Accordion -->
     </div>
   </section>
@@ -103,5 +116,4 @@
   <!-- Your script -->
   <script src="JS_Source/script.js"></script>
 </body>
-
 </html>

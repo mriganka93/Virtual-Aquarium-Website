@@ -6,10 +6,20 @@
   <title>Contact | Virtual Aquarium</title>
   <link rel="icon" type="image/png" href="images/coralicon.png" />
   <link rel="stylesheet" href="designing_css/style.css" />
+  <!-- Font Awesome for icons (added back for consistency) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="habitat.html">Habitats</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Header -->
   <header>
     <div class="container">
       <h1>🌊 Virtual Aquarium</h1>
@@ -22,6 +32,12 @@
         </ul>
       </nav>
     </div>
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </header>
 
   <!-- Contact Hero -->
@@ -58,7 +74,6 @@
       <p><strong>Phone:</strong> +123-456-7890</p>
       <p><strong>Location:</strong> Marine Studies Dept., Ocean University</p>
 
-
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95565131531758!3d-37.817327979751554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2c9%3A0x3e8f236c0c1e23e0!2sAquarium!5e0!3m2!1sen!2sau!4v1630740102971!5m2!1sen!2sau"
         width="100%" 
@@ -71,10 +86,10 @@
     </div>
   </section>
 
-
   <footer>
     <p>&copy; 2025 Virtual Aquarium | Built for University Project</p>
   </footer>
 
+  <script src="JS_Source/script.js"></script>
 </body>
 </html>
