@@ -1,4 +1,4 @@
-# 🌊 Virtual Aquarium
+ Virtual Aquarium
 
 Welcome to the **Virtual Aquarium** by Mriganka, an interactive web project built for a university assignment. Explore the wonders of the deep blue sea—from vibrant coral reefs to the graceful dance of ocean creatures. Dive into an interactive journey through marine ecosystems, rare species, and the hidden beauty of life beneath the surface, all from the comfort of your screen.
 
@@ -45,7 +45,7 @@ Follow these steps to run the Virtual Aquarium locally on your machine:
    - Open your terminal and navigate to your desired directory:
      ```bash
      cd ~/path/to/your/folder
-     git clone https://github.com/mriganka93/Virtual-Aquarium-Website.git
+     git clone https://github.com/mriganka93/Virtual-Aquarium-Website.git -b main
      cd Virtual-Aquarium-Website
 Known Issues
 
